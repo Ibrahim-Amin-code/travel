@@ -9,6 +9,7 @@ import 'package:travel/presentation/widgets/login_form/login_form.dart';
 class LoginScreen extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController confirm = TextEditingController();
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
