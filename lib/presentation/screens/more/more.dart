@@ -28,10 +28,13 @@ class _ViewMoreScreenState extends State<ViewMoreScreen> {
         actions: [
           InkWell(
             onTap: () => Navigator.pop(context),
-            child: Icon(
-              Icons.clear,
-              color: MyColors.mainColor,
-              size: w * 0.09,
+            child: Padding(
+              padding: EdgeInsets.only(right: w * 0.02, left: w * 0.02),
+              child: Icon(
+                Icons.close,
+                size: 38,
+                color: const Color(0xff3A0CA3).withOpacity(0.55),
+              ),
             ),
           ),
         ],

@@ -10,33 +10,38 @@ class AboutUsScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        automaticallyImplyLeading: false,
+        title: const Text(
+          'About Us',
+          style: TextStyle(
+            fontSize: 35,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
+            color: Color(0xff3A0CA3),
+          ),
+        ),
+        actions: [
+          InkWell(
+            onTap: () => Navigator.pop(context),
+            child: Padding(
+              padding: EdgeInsets.only(right: w * 0.02, left: w * 0.02),
+              child: Icon(
+                Icons.close,
+                size: 38,
+                color: const Color(0xff3A0CA3).withOpacity(0.55),
+              ),
+            ),
+          ),
+        ],
+      ),
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: w * 0.06, vertical: h * 0.08),
+        padding: EdgeInsets.symmetric(horizontal: w * 0.06, vertical: h * 0.04),
         shrinkWrap: true,
         primary: true,
         children: [
-          Align(
-              alignment: Alignment.topRight,
-              child: InkWell(
-                onTap: () => Navigator.pop(context),
-                child: Icon(
-                  Icons.close,
-                  size: 38,
-                  color: const Color(0xff3A0CA3).withOpacity(0.55),
-                ),
-              )),
-          const Text(
-            'About Us',
-            style: TextStyle(
-              fontSize: 35,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.bold,
-              color: Color(0xff3A0CA3),
-            ),
-          ),
-          SizedBox(
-            height: h * 0.04,
-          ),
           const Text(
             'Lorem ipsum',
             style: TextStyle(
